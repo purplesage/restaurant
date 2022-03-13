@@ -102,3 +102,25 @@ input, select {
 }
 //--------------------------------------------------------------
 
+
+
+
+//page top navigation styling-----------------------------------
+
+#root {
+    width: 100vw;
+    height: 100vh;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .nav-ul {
+        display: flex;
+    }
+}
+
+//------------------------------------------------------------------
