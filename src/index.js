@@ -1,4 +1,5 @@
 import {homeContent} from './home.js';
+import {contactContent} from './contact.js';
 import './styles/index.scss';
 
 
@@ -43,7 +44,7 @@ const rootElement = (() => {
 const contentCapsule = () =>{
     let home = homeContent();
     let menu = "menuContent";  //todo: change this when content is done
-    let contact = "contactContent";
+    let contact = contactContent();
 
     return [home, menu, contact];
 };
@@ -53,29 +54,34 @@ const contentCapsule = () =>{
 
 const tabChangingLogic = (() => {
 
-    const contentCheck = [true, false, false]; //home, menu, contact. active check.
+    const contentCheck = [false, false, false]; //home, menu, contact. active check.
     rootElement.rootDiv.appendChild(contentCapsule()[0]); //default content on page load
     const navTabItems = document.querySelector(".nav-ul").getElementsByTagName('li');
+    
 
     for (let i = 0; i < navTabItems.length; i++) {
 
         navTabItems[i].addEventListener('click', () => {
-            const content = document.querySelector('.content');
+            
             if (contentCheck[i] === false){
             
+                const content = document.querySelector('.content');
                 rootElement.rootDiv.removeChild(content);
                 rootElement.rootDiv.appendChild(contentCapsule()[i]);
+                content = document.querySelector('.content');
+
+                //these statements are used to tell JS which tab is currently active.
+                if (i < 2) {
+                    contentCheck[i] = true;
+                    contentCheck[i+1] = false;
+                    contentCheck[i-1] = false;
+                }else{
+                    contentCheck[i] = true;
+                    contentCheck[i-1] = false;
+                    contentCheck[i-2] = false;
+                }  
             }
-            //these statements are used to tell JS which tab is currently active.
-            if (i !== 2) {
-                contentCheck[i] = true;
-                contentCheck[i+1] = false;
-                contentCheck[i-1] = false;
-            }else{
-                contentCheck[i] = true;
-                contentCheck[i-1] = false;
-                contentCheck[i-2] = false;
-            }  
+            
         });
     }
 })();
