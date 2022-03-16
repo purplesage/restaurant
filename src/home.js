@@ -1,27 +1,30 @@
-import homeImage from './assets/images/ashe.png'; //this will be changed.
-let theImage = new Image();
-theImage.src = homeImage;
-
 const homeContent = () => {
 
 let contentDiv = document.createElement('div');
 
-let introString = document.createElement('p');
-introString.textContent = "intro string";
+let redDiv = document.createElement('div');
+let redDivContent = document.createElement('p');
+redDivContent.textContent = "mock content";
+redDiv.appendChild(redDivContent);
+redDiv.classList = "red-div"
 
-let introString2 = document.createElement('p');
-introString2.textContent = "intro string(2)";
+let whiteDiv = document.createElement('div');
+let whiteDivContent = document.createElement('p');
+whiteDivContent.textContent = "mock content";
+whiteDiv.appendChild(whiteDivContent);
+whiteDiv.classList = "white-div"
 
-let orderString = document.createElement('p');
-orderString.textContent = "order string";
 
-let theImage = new Image();
-theImage.src = homeImage;
+let yellowDiv = document.createElement('div');
+let yellowDivContent = document.createElement('p');
+yellowDivContent.textContent = "mock content";
+yellowDiv.appendChild(yellowDivContent);
+yellowDiv.classList = "yellow-div"
 
-contentDiv.appendChild(introString);
-contentDiv.appendChild(introString2);
-contentDiv.appendChild(theImage);
-contentDiv.appendChild(orderString);
+
+contentDiv.appendChild(redDiv);
+contentDiv.appendChild(whiteDiv);
+contentDiv.appendChild(yellowDiv);
 contentDiv.classList = 'home-content';
 contentDiv.setAttribute('id', 'content');
 

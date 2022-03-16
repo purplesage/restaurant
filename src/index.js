@@ -48,7 +48,7 @@ const rootElement = (() => {
 const defaultFooter = (() => {
     let footer = document.createElement('footer');
     let footerContent = document.createElement('p');
-    footerContent.textContent = "sage made this lmao";
+    footerContent.textContent = "Copyright @2022 David Mendoza";
     footer.appendChild(footerContent);
     rootElement.rootDiv.appendChild(footer);
     
@@ -71,8 +71,7 @@ const contentCapsule = () =>{ //?this will be useful for the 'todo' project
 
 const tabChangingLogic = (() => {  //?this will be useful for the 'todo' project
 
-    /* const contentCheck = [false, false, false]; //home, menu, contact. active check. */
-    rootElement.rootDiv.appendChild(contentCapsule()[0]); //default content on page load
+    rootElement.rootDiv.appendChild(contentCapsule()[0]); // home. default content on page load
     const navTabItems = document.querySelector(".nav-ul").getElementsByTagName('li');
 
     for (let i = 0; i < navTabItems.length; i++) {
