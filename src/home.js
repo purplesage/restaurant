@@ -22,7 +22,8 @@ contentDiv.appendChild(introString);
 contentDiv.appendChild(introString2);
 contentDiv.appendChild(theImage);
 contentDiv.appendChild(orderString);
-contentDiv.classList = 'content';
+contentDiv.classList = 'home-content';
+contentDiv.setAttribute('id', 'content');
 
 return contentDiv
 

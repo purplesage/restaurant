@@ -105,7 +105,7 @@ input, select {
 
 
 
-//page top navigation styling-----------------------------------
+//page navigation styling-----------------------------------
 
 #root {
     width: 100vw;
@@ -120,6 +120,7 @@ input, select {
 
     .nav-ul {
         display: flex;
+        cursor: pointer;
     }
 }
 

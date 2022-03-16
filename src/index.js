@@ -1,5 +1,6 @@
 import {homeContent} from './home.js';
 import {contactContent} from './contact.js';
+import {menuContent} from './menu.js';
 import './styles/index.scss';
 
 
@@ -41,9 +42,9 @@ const rootElement = (() => {
 
 //*content capsule-----------------
 
-const contentCapsule = () =>{
+const contentCapsule = () =>{ //?this will be useful for the 'todo' project
     let home = homeContent();
-    let menu = "menuContent";  //todo: change this when content is done
+    let menu = /* menuContent(); */"some stuff";  //todo: change this when content is done
     let contact = contactContent();
 
     return [home, menu, contact];
@@ -52,36 +53,20 @@ const contentCapsule = () =>{
 
 //*Tab changing logic:--------------------------
 
-const tabChangingLogic = (() => {
+const tabChangingLogic = (() => {  //?this will be useful for the 'todo' project
 
-    const contentCheck = [false, false, false]; //home, menu, contact. active check.
+    /* const contentCheck = [false, false, false]; //home, menu, contact. active check. */
     rootElement.rootDiv.appendChild(contentCapsule()[0]); //default content on page load
     const navTabItems = document.querySelector(".nav-ul").getElementsByTagName('li');
-    
 
     for (let i = 0; i < navTabItems.length; i++) {
 
         navTabItems[i].addEventListener('click', () => {
             
-            if (contentCheck[i] === false){
-            
-                const content = document.querySelector('.content');
+            let content = document.getElementById('content');
                 rootElement.rootDiv.removeChild(content);
                 rootElement.rootDiv.appendChild(contentCapsule()[i]);
-                content = document.querySelector('.content');
-
-                //these statements are used to tell JS which tab is currently active.
-                if (i < 2) {
-                    contentCheck[i] = true;
-                    contentCheck[i+1] = false;
-                    contentCheck[i-1] = false;
-                }else{
-                    contentCheck[i] = true;
-                    contentCheck[i-1] = false;
-                    contentCheck[i-2] = false;
-                }  
-            }
-            
+                content = document.getElementById('content');
         });
     }
 })();
