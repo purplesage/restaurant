@@ -12,9 +12,11 @@ const rootElement = (() => {
     const rootDiv = document.getElementById('root');
     const navDiv = document.createElement('nav');
     const restaurantName = document.createElement('h1');
-    restaurantName.textContent = 'Random Restaurant';
+    restaurantName.textContent = "Gordo's Burger";
     const navUl = document.createElement('ul');
     const ulItems = ["Home", "Menu", "Contact"];
+    const description = document.createElement('p');
+    description.textContent = 'premium quality fast food';
 
     // <li> elements
 
@@ -25,7 +27,10 @@ const rootElement = (() => {
     }
 
     navDiv.appendChild(restaurantName);
+    navDiv.appendChild(description);
     navDiv.appendChild(navUl);
+
+
     rootDiv.appendChild(navDiv);
 
     //Adding classes to DOM elements:
