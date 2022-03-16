@@ -1,0 +1,30 @@
+*{
+    outline: red 1px solid !important;
+}
+
+
+.menu-content {
+
+
+    ul {
+
+        border: black 1px solid;
+        display: grid;
+        grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr;
+
+
+        li {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+    
+
+            img {
+                width: 60px;
+                height: 60px;
+            }
+        }
+    }
+
+}

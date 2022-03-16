@@ -5,7 +5,7 @@ const contactContent = () => {
     mock.textContent = "mock content";
 
     contentDiv.appendChild(mock);
-    contentDiv.classList = 'content';
+    contentDiv.classList = 'contact-content';
     contentDiv.setAttribute('id', 'content');
     
     return contentDiv

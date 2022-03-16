@@ -42,7 +42,6 @@ const menuContent = () => {
     for (let i = 0; i <= 7; i++) {
 
         let menuItem = document.createElement('li');
-        menuItem.appendChild('h3');
         
         let theImage = new Image();
         theImage.src = imageList[i];
@@ -60,7 +59,8 @@ const menuContent = () => {
     }
 
     contentDiv.appendChild(menuUl);
-    contentDiv.classList = "content";
+    contentDiv.classList = "menu-content";
+    contentDiv.setAttribute('id', 'content');
     
     return contentDiv
     

@@ -38,13 +38,24 @@ const rootElement = (() => {
 
 })();
 
+//*footer
+
+const defaultFooter = (() => {
+    let footer = document.createElement('footer');
+    let footerContent = document.createElement('p');
+    footerContent.textContent = "sage made this lmao";
+    footer.appendChild(footerContent);
+    rootElement.rootDiv.appendChild(footer);
+    
+})();
+
 
 
 //*content capsule-----------------
 
 const contentCapsule = () =>{ //?this will be useful for the 'todo' project
     let home = homeContent();
-    let menu = /* menuContent(); */"some stuff";  //todo: change this when content is done
+    let menu = menuContent();  //todo: change this when content is done
     let contact = contactContent();
 
     return [home, menu, contact];
