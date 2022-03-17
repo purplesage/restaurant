@@ -115,18 +115,24 @@ input, select {
     width: 100vw;
     height: 100vh;
     display: grid;
-    grid-template: 150px 1fr 50px / 1fr;
-    background-color: rgb(110, 54, 4);
+    grid-template: 160px 1fr 50px / 1fr;
+    background-color: rgb(24, 24, 24);
+    background-image: url(../assets/images/burger.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
 
     footer {
         grid-row: 3 / -1;
-        background-color: rgb(236, 153, 29);
+        background-color: rgba(14, 14, 14, 0.83);
         display: flex;
         justify-content: center;
         align-items: center;
         color: white;
         font-weight: bolder;
         text-shadow: 1px 1px 1px black;
+        font-size: .8em;
     }
 }
 
@@ -136,16 +142,20 @@ input, select {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    background-color: rgb(236, 153, 29);
+    background-color: rgba(14, 14, 14, 0.83);
 
     
 
     p{
-        color: rgb(228, 2, 2);
-        font-weight: bold;
+        color: rgb(221, 3, 3);
+        font-weight: normal;
         position: relative;
         bottom: 12px;
         font-size: .85rem;
+        font-style: italic;
+        letter-spacing: 3px;
+        text-shadow: rgb(0, 0, 0) 1px 1px 1px;
+        
     }
 
 
@@ -155,19 +165,20 @@ input, select {
         text-shadow: 3px 3px 3px black;
         font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         font-size: 4rem;
-        border-bottom: rgb(0, 0, 0) 3px double;
+        border-bottom: rgb(255, 255, 255) 3px double;
     }
 
     .nav-ul {
         font-family: monospace;
         display: flex;
         cursor: pointer;
-        gap: 20px;
-        color: black;
+        gap: 40px;
+        color: rgb(255, 255, 255);
         font-weight: bold;
         font-size: 1.3rem;
         position: relative;
         left: 12px;
+        margin-bottom: 10px;
         
 
         li {
@@ -176,11 +187,12 @@ input, select {
 
             &:hover {
                 transition: 0.15s;
-                color: rgb(192, 24, 24);
+                color: rgb(214, 4, 4);
                 
             }
         }
     }
 }
+
 
 //------------------------------------------------------------------
