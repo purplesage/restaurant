@@ -1,4 +1,4 @@
-import mockImage from './assets/images/ashe.png';
+import mockImage from './assets/images/menuburguer.jpg';
 
 const menuContent = () => {
 

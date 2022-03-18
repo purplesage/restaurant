@@ -1,6 +1,6 @@
 import clock from './assets/images/clock.jpg';
 import quote from './assets/images/quote.jpg';
-/* import delivery from './assets/images/clock.jpg'; */
+import delivery from './assets/images/delivery.jpg';
 
 const homeContent = () => {
 
@@ -11,6 +11,9 @@ clockImage.src = clock;
 
 let quoteImage = new Image();
 quoteImage.src = quote;
+
+let deliveryImage = new Image();
+deliveryImage.src = delivery;
 
 
 
@@ -26,10 +29,9 @@ whiteDiv.classList = "white-div";
 
 
 let yellowDiv = document.createElement('div');
-let yellowDivContent = document.createElement('p');
-yellowDivContent.textContent = "delivery";
-yellowDiv.appendChild(yellowDivContent);
-yellowDiv.classList = "yellow-div"
+yellowDiv.innerHTML = `<h4>Delivery</h4><p>Use our delivery service and get delicious food wherever you are!</p>`;
+yellowDiv.appendChild(deliveryImage);
+yellowDiv.classList = "yellow-div";
 
 
 contentDiv.appendChild(redDiv);
