@@ -60,7 +60,7 @@ const defaultFooter = (() => {
 
 const contentCapsule = () =>{ //?this will be useful for the 'todo' project
     let home = homeContent();
-    let menu = menuContent();  //todo: change this when content is done
+    let menu = menuContent(); 
     let contact = contactContent();
 
     return [home, menu, contact];
@@ -81,7 +81,7 @@ const tabChangingLogic = (() => {  //?this will be useful for the 'todo' project
             let content = document.getElementById('content');
                 rootElement.rootDiv.removeChild(content);
                 rootElement.rootDiv.appendChild(contentCapsule()[i]);
-                content = document.getElementById('content');
+                content = document.getElementById('content');//this line might not be necesary
         });
     }
 })();
